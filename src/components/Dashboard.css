@@ -1,0 +1,166 @@
+/* Ensure full-page layout */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Full-screen background */
+.dashboard-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Add overlay for better readability */
+.dashboard-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Logout Button */
+.logout-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    width:100px;
+}
+
+.logout-btn:hover {
+    background: darkred;
+}
+
+/* Balance Overview */
+.balance-section {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.income-text {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+.expense-text {
+    color: red;
+    font-weight: bold;
+}
+
+/* Transactions */
+.transactions-container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.transactions-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transactions-container li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.transactions-container .income {
+    color: lightgreen;
+}
+
+.transactions-container .expense {
+    color: red;
+}
+
+.category {
+    font-weight: bold;
+}
+
+.date {
+    font-size: 12px;
+    margin-left: 10px;
+    opacity: 0.8;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.add-income-btn, .add-expense-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+}
+
+.add-income-btn {
+    background: green;
+    color: white;
+}
+
+.add-income-btn:hover {
+    background: darkgreen;
+}
+
+.add-expense-btn {
+    background: red;
+    color: white;
+}
+
+.add-expense-btn:hover {
+    background: darkred;
+}

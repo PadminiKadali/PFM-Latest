@@ -1,0 +1,102 @@
+/* Full-screen container */
+.SignUp-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Background video styling */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* SignUp form box */
+.SignUp-box {
+  width: 400px; /* Adjust width as needed */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+}
+
+/* Title */
+.SignUp-box h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.SignUp-box .input-container {
+  position: relative;
+  width: 85%;
+}
+
+.SignUp-box .gender {
+  position: relative;
+  width: 85%;
+}
+
+.SignUp-box input, 
+.SignUp-box select {
+  width: 120%;
+  padding: 12px 40px 12px 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Icons inside input */
+.SignUp-box .input-container .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+/* Button */
+.SignUp-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #8E44AD;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.SignUp-box button:hover {
+  background: #732D91;
+}
+
+/* Login link */
+.SignUp-box .login-link {
+  margin-top: 15px;
+  color: #f0c419;
+}
+
+.SignUp-box .login-link a {
+  color: #f0c419;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.SignUp-box .login-link a:hover {
+  text-decoration: underline;
+}
